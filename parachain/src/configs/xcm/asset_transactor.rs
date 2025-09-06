@@ -44,4 +44,7 @@ pub type ForeignFungiblesTransactor = FungiblesAdapter<
 >;
 
 // TODO: Need to plug in the adapters here.
-pub type AssetTransactor = ();
+pub type AssetTransactor = (
+	LocalFungibleTransactor,
+	ForeignFungiblesTransactor
+);
